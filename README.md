@@ -13,13 +13,13 @@
 
 ## Requirements
 
-* iOS9+
-* Xcode 8.1
-* Swift 3.0
+* iOS 9.0 or higher / macOS 10.11 or higher / Ubuntu Linux 14.04 or higher 
+* Xcode 8.1 or newer for iOS or macOS
+* Swift 3.0 for iOS or macOS, 3.0.2 for Linux
 
 ## Feedback
 
-Because this framework is open source it is best for most situations to post on Stack Overflow and tag it **Theo**. If you do 
+Because this framework is open source it is best for most situations to post on Stack Overflow and tag it **[Theo](http://stackoverflow.com/questions/tagged/theo)**. If you do 
 find a bug please file an issue or issue a PR for any features or fixes.
 
 ## Installation
