@@ -12,7 +12,7 @@
 
 ## Requirements
 
-* iOS8+
+* iOS9+
 * Xcode 8.1
 * Swift 3.0
 
@@ -27,7 +27,10 @@ You can install Theo in a number of ways
 ###Swift Package Manager
 Add the following line to your Package dependencies array:
 
+```swift
 .Package(url: "https://github.com/GraphStory/neo4j-ios.git”, majorVersion: 3, minor: 0)
+```
+Run `swift build` to build your project, now with Theo included and ready to be used from your source
 
 ###CococaPods
 Add the following to your Podfile:
@@ -41,6 +44,7 @@ target '<Your Target Name>' do
   pod ‘Theo’
 end
 ```
+Run `pod install` to configure your updated workspace. Open the .xcworkspace generated, your project is now ready to use Theo
 
 ###Carthage
 Add the following to your Cartfile:
