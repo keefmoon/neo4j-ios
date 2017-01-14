@@ -248,6 +248,6 @@ Swift 3.0.1 on Ubuntu Linux 14.04 sometimes looses all headers in an URL request
 
 ## Authors
 
-[Cory Wiles](http://www.corywiles.com/) ([@kwylez](https://twitter.com/kwylez))
-[Niklas Saers](http://niklas.sasers.com/) ([@niklassaers](https://twitter.com/niklassaers))
+* [Cory Wiles](http://www.corywiles.com/) ([@kwylez](https://twitter.com/kwylez))
+* [Niklas Saers](http://niklas.sasers.com/) ([@niklassaers](https://twitter.com/niklassaers))
 
