@@ -243,7 +243,7 @@ There is a file called, `TheoConfig.json.example` which you should copy to `Theo
 * Hit `CMD-U`
 
 ## Known issues
-Swift 3.0.1 on Ubuntu Linux 14.04 sometimes looses all headers in an URL request, thus making the server return a HTTP status code 401 where 200 was expected. In your code where you handle retries for unexpected network results, you may want to take this into account If you are interested in this issue, you can follow [this bug report][https://bugs.swift.org/browse/SR-3463] and [this stack overflow post][http://stackoverflow.com/questions/41601863/urlsession-on-linux-giving-different-result-than-on-ios]
+Swift 3.0.1 on Ubuntu Linux 14.04 sometimes looses all headers in an URL request, thus making the server return a HTTP status code 401 where 200 was expected. In your code where you handle retries for unexpected network results, you may want to take this into account If you are interested in this issue, you can follow [this bug report](https://bugs.swift.org/browse/SR-3463) and [this stack overflow post](http://stackoverflow.com/questions/41601863/urlsession-on-linux-giving-different-result-than-on-ios)
 
 
 ## Authors
