@@ -22,6 +22,35 @@ Because this framework is open source it is best for most situations to post on 
 find a bug please file an issue or issue a PR for any features or fixes.
 
 ## Installation
+You can install Theo in a number of ways
+
+###Swift Package Manager
+Add the following line to your Package dependencies array:
+
+.Package(url: "https://github.com/GraphStory/neo4j-ios.git”, majorVersion: 3, minor: 0)
+
+###CococaPods
+Add the following to your Podfile:
+
+```ruby
+source 'https://github.com/CocoaPods/Specs.git'
+platform :ios, ‘9.0’
+use_frameworks!
+
+target '<Your Target Name>' do
+  pod ‘Theo’
+end
+```
+
+###Carthage
+Add the following to your Cartfile:
+
+```ogdl
+github "GraphStory/neo4j-ios" ~> 4.0
+```
+Run `carthage update` to build the framework and drag the built `Theo.framework` into your Xcode project.
+
+###git submodule
 
   1. Add it as a submodule to your existing project. `git submodule add git@github.com:GraphStory/neo4j-ios.git`
   2. Open the Theo folder, and drag Theo.xcodeproj into the file navigator of your Xcode project.
