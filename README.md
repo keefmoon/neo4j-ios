@@ -9,6 +9,7 @@
 
 * CRUD operations for Nodes and Relationships
 * Transaction statement execution
+* Supports iOS, macOS and Linux
 
 ## Requirements
 
@@ -223,14 +224,14 @@ theo.executeTransaction(statements, completionBlock: {(response, error) in
 
 ```Swift
         let theo: Client = Client(baseURL: configuration.host, user: configuration.username, pass: configuration.password)
-        let cyperQuery: String = "MATCH (u:User {username: {user} }) WITH u MATCH (u)-[:FOLLOWS*0..1]->f WITH DISTINCT f,u MATCH f-[:LASTPOST]-lp-[:NEXTPOST*0..3]-p RETURN p.contentId as contentId, p.title as title, p.tagstr as tagstr, p.timestamp as timestamp, p.url as url, f.username as username, f=u as owner"
+        let cyperQuery: String = "MATCH (u:User {username: {user} }) WITH u MATCH (u)-[:FOLLOWS*0..1]->(f) WITH DISTINCT f,u MATCH (f)-[:LASTPOST]-(lp)-[:NEXTPOST*0..3]-(p) RETURN p.contentId as contentId, p.title as title, p.tagstr as tagstr, p.timestamp as timestamp, p.url as url, f.username as username, f=u as owner"
         let cyperParams: Dictionary<String, AnyObject> = ["user" : "ajordan"]
 
         theo.executeCypher(cyperQuery, params: cyperParams, completionBlock: {(cypher, error) in
             println("response from cyper \(cypher)")
         })
 ```
-## Unit Tests
+## Integration Tests
 
 ### Setup
 
@@ -241,7 +242,12 @@ There is a file called, `TheoConfig.json.example` which you should copy to `Theo
 * Select the unit test target
 * Hit `CMD-U`
 
-## Creator
+## Known issues
+Swift 3.0.1 on Ubuntu Linux 14.04 sometimes looses all headers in an URL request, thus making the server return a HTTP status code 401 where 200 was expected. In your code where you handle retries for unexpected network results, you may want to take this into account If you are interested in this issue, you can follow [this bug report][https://bugs.swift.org/browse/SR-3463] and [this stack overflow post][http://stackoverflow.com/questions/41601863/urlsession-on-linux-giving-different-result-than-on-ios]
+
+
+## Authors
 
 [Cory Wiles](http://www.corywiles.com/) ([@kwylez](https://twitter.com/kwylez))
+[Niklas Saers](http://niklas.sasers.com/) ([@niklassaers](https://twitter.com/niklassaers))
 
