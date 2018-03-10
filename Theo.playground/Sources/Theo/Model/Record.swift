@@ -1,5 +1,4 @@
 import Foundation
-import PackStream
 
 extension Double: ResponseItem {}
 extension Int8: ResponseItem {}

@@ -1,5 +1,4 @@
 import Foundation
-import Bolt
 
 public struct QuerySummary {
     let stats: QueryStats?

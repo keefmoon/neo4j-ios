@@ -1,6 +1,4 @@
 import Foundation
-import Bolt
-import PackStream
 
 public protocol ResponseItem {}
 
